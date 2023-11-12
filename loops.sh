@@ -3,7 +3,8 @@ do
     echo $i
 done
  name=["ravi" "suma" "Radha"]
+ echo "$name[0]"
  for i in $@
 do
-  echo $name[i]
+  echo "$i"
 done 
