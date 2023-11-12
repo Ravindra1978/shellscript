@@ -22,7 +22,7 @@ VALIDATE()
       echo -e "Installing $2 is $G SUCCESS...$N"
   fi
 }
-   yum install mailx -y &>>LOGFILE
+   yum install mailxx -y &>>LOGFILE
    VALIDATE  $? "mailx" 
    yum install postfix -y &>>LOGFILE
    VALIDATE $? "postfix"
