@@ -11,3 +11,11 @@ fi
    else
       echo "mailx installed successfully...."
   fi
+  yum install postfix -y
+  if [ $? -ne 0 ]
+  then
+     echo "instalation of postix is not successful..."
+  else
+      echo "postix installation is successful..."
+ fi
+ 
