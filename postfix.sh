@@ -2,6 +2,9 @@
 DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+R="\e[31m
+G="\e[32m]
+N="\e[0m]
 USERID=$(id -u)
 echo "scriptname is $SCRIPT_NAME"
 echo "logfile value is $LOGFILE"
@@ -14,9 +17,9 @@ VALIDATE()
 {
     if [ $1 -ne 0 ]
    then
-      echo "Installing $2 is FAILURE..."
+      echo "$R Installing $2 is FAILURE...$N"
    else
-      echo "Installing $2 is SUCCESS..."
+      echo "$R Installing $2 is SUCCESS...$N"
   fi
 }
    yum install mailx -y &>>LOGFILE
