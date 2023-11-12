@@ -17,9 +17,9 @@ VALIDATE()
 {
     if [ $1 -ne 0 ]
    then
-      echo -e "$R Installing $2 is FAILURE...$N"
+      echo -e "Installing $2 is $R FAILURE...$N"
    else
-      echo -e "$R Installing $2 is SUCCESS...$N"
+      echo -e "Installing $2 is $G SUCCESS...$N"
   fi
 }
    yum install mailx -y &>>LOGFILE
