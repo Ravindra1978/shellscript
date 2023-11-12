@@ -1,5 +1,5 @@
  name=("ravi" "suma" "Radha")
- for i in $@
+ for name in $@
  do
-    echo "$i"
- done 
+    echo "$name"
+ done
