@@ -1,7 +1,7 @@
 #!/bin/bash
 DATE=$(date +%F)
 SCRIPT_NAME=$0
-LOGFILE=/home/ec2-user/$SCRIPT_NAME-$DATE.log
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
@@ -22,8 +22,8 @@ VALIDATE()
       echo -e "Installing $2 is $G SUCCESS...$N"
   fi
 }
-   yum install mailxx -y &>>LOGFILE
+   yum install mailxx -y &>> LOGFILE
    VALIDATE  $? "mailx" 
-   yum install postfix -y &>>LOGFILE
+   yum install postfix -y &>> LOGFILE
    VALIDATE $? "postfix"
 
