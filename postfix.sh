@@ -1,10 +1,10 @@
 #!/bin/bash
 DATE=$(date +%F)
 SCRIPT_NAME=$0
-LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
-R="\e[31m
-G="\e[32m]
-N="\e[0m]
+LOGFILE=/home/ec2-user/$SCRIPT_NAME-$DATE.log
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 USERID=$(id -u)
 echo "scriptname is $SCRIPT_NAME"
 echo "logfile value is $LOGFILE"
