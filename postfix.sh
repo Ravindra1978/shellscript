@@ -4,6 +4,7 @@ SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 USERID=$(id -u)
 echo "scriptname is $SCRIPT_NAME"
+echo "logfile value is $LOGFILE"
 if [ $USERID -ne 0 ]
 then
     echo "Please run the script with root user..."
