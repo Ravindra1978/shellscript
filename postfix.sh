@@ -1,5 +1,7 @@
 #!/bin/bash
-
+DATE=$(date +%F-%H-%M-%S)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
@@ -15,8 +17,8 @@ VALIDATE()
       echo "Installing $2 is SUCCESS..."
   fi
 }
-   yum install mailx -y
-   VALIDATE  $? "mailx"
-  yum install postfix -y
-  VALIDATE $? "postfix"
+   yum install mailx -y &>LOGFILE
+   VALIDATE  $? "mailx" 
+   yum install postfix -y &>>LOGFILE
+   VALIDATE $? "postfix"
 
