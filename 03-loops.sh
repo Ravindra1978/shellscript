@@ -18,15 +18,16 @@ VALIDATE()
 if [ $USERID -ne 0 ]
 then
     echo -e "$R ERROR:: Please run the script with root user..$N"
+    exit 1
 fi
 for i in $@
 do 
   yum list installed $i &>>$LOGFILE
-  if [ $? -ne 0]
+  if [ $? -ne 0 ]
   then
       echo -e "$G Package $i is not installed. Please install it....$N"
       yum install $i -y  &>>LOGFILE
       VALIDATE $? "$i"
   else
-      echo -e "$R The package $i is already installed....$N" 
+      echo -e "$R package $i is already installed....$N" 
 done
