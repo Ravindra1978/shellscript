@@ -2,7 +2,7 @@
 #This program delete the files which are 2 weeks ago.
 APP_LOGS_DIR=/home/ec2-user/app-logs
     LOGS_DIR=/home/ec2-user/shellscript-logs
-    DATE=$(date -u)
+    DATE=$(date +%F)
     SCRIPT_NAME=$0
     LOGFILE=$LOGS_DIR/$0-$DATE.log
 
