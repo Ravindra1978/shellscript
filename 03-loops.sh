@@ -30,4 +30,5 @@ do
       VALIDATE $? "$i"
   else
       echo -e "$R package $i is already installed....$N" 
+  fi    
 done
