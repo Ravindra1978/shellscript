@@ -1,7 +1,7 @@
 #!/bin/bash
 NAMES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "cart" "user" "shipping" "payments" "dispatch" "web")
 INSTANCE_TYPE=""
-IMAGE-ID=ami-03265a0778a880afb
+IMAGE_ID=ami-03265a0778a880afb
 SECURITY_GROUP_ID=sg-02aff670556d3d4d0
 for i in ${NAMES[@]}
 do
