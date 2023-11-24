@@ -23,6 +23,7 @@ DISK_USAGE_THRESHOLD=1
 #IFS--Internal Field Separator
 while IFS= read line
 do
-   echo "output: $line"
+    #this command will give disk usage in number format for comparision.
+    $(df -hT | grep -vE 'tmpfs|Filesystem' | awk '{print $6}' | (cut -d % -f1)
 done <<< $DISK_USAGE
 
